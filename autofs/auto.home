@@ -1,0 +1,4 @@
+#
+# This file is managed by saltstack, do not modify
+#
+*	-tnfs4	kantoor.proigia.nl:/home/&

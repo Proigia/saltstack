@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# /etc/auto.net4
+# This file must be executable to work! chmod 755!
+# This is very simple
+
+
+opts="-fstype=nfs4,nodev,nosuid,nonstrict,nodev,sync,_netdev,proto=tcp,retry=10,rsize=32768,wsize=32768,hard,intr"
+
+# Just echo options, a hostname and the export root.
+echo "${opts} ${1}:/"
+

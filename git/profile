@@ -1,0 +1,6 @@
+email:
+ldapsearch -x -b dc=proigia,dc=nl "(uid=wouter)" | grep "^mail:" | cut -f2- -d ' '
+
+gecos:
+ldapsearch -x -b dc=proigia,dc=nl "(uid=wouter)" | grep "^gecos:" | cut -f2- -d ' '
+
