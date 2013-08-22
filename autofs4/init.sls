@@ -14,7 +14,7 @@ autofs:
   file:
     - managed
     - source: salt://autofs4/auto.master
-    - owner: root
+    - user: root
     - group: root
     - mode: 644
     - require:
@@ -24,7 +24,7 @@ autofs:
   file:
     - managed
     - source: salt://autofs4/auto.net4
-    - owner: root
+    - user: root
     - group: root
     - mode: 755
     - require:

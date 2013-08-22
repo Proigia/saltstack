@@ -11,7 +11,7 @@ nfs_server:
   file:
     - managed
     - source: salt://nfs_server/exports
-    - owner: root
+    - user: root
     - group: root
     - mode: 644
 
