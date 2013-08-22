@@ -18,3 +18,6 @@ base:
     - nfs4
     - mk_homedir
     - nfs_server
+  'roles:laptop':
+    - match: grain
+    - sssd_auth
