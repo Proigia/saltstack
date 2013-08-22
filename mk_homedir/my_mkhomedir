@@ -3,4 +3,4 @@ Default: yes
 Priority: 900
 Session-Type: Additional
 Session:
-        required                        pam_mkhomedir.so umask=0027 skel=/etc/skel
+        optional                        pam_mkhomedir.so umask=0027 skel=/etc/skel
