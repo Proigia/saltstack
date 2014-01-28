@@ -2,6 +2,9 @@ nfs-common:
   pkg:
     - installed
   service:
+    {% if grains['os'] == 'Ubuntu' %}
+    - name: rpc.idmapd
+    {% endif %}
     - running
     - watch:
       - file: /etc/idmapd.conf
