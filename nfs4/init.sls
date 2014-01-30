@@ -3,7 +3,7 @@ nfs-common:
     - installed
   service:
     {% if grains['os'] == 'Ubuntu' %}
-    - name: rpc.idmapd
+    - name: idmapd
     {% endif %}
     - running
     - watch:

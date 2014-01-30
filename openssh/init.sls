@@ -2,7 +2,7 @@ openssh-server:
   pkg:
     - latest
 
-ssh:
+sshd:
   service.running:
     - enabled: True
     - require:
