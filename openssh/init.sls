@@ -3,7 +3,7 @@ openssh-server:
     - latest
   service:
     - running
-    - name: sshd
+    - name: ssh
 
 openssh-client:
   pkg:
