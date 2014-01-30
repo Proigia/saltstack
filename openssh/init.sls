@@ -1,12 +1,9 @@
 openssh-server:
   pkg:
     - latest
-
-sshd:
-  service.running:
-    - enabled: True
-    - require:
-        - pkg.latest: openssh-server
+  service:
+    - running
+    - name: sshd
 
 openssh-client:
   pkg:
