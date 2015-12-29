@@ -4,25 +4,16 @@ autofs:
   service:
     - running
     - watch:
-      - file: /etc/auto.master
-      - file: /etc/auto.home
-
-/etc/auto.master:
+{%- for file in ['master', 'home'] %}
+      - file: /etc/auto.{{ file }}
+      
+/etc/auto.{{ file }}:
   file:
     - managed
-    - source: salt://autofs/auto.master
+    - source: salt://autofs/auto.{{ file }}
     - user: root
     - group: root
     - mode: 644
     - require:
       - pkg: autofs
-
-/etc/auto.home:
-  file:
-    - managed
-    - source: salt://autofs/auto.home
-    - user: root
-    - group: root
-    - mode: 644
-    - require:
-      - pkg: autofs
+{% endfor %}
